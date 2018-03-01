@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.abrolly.controller;
 
 import java.util.List;
 
@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.DemoApplication;
-import com.example.model.Question;
-import com.example.service.QuestionService;
+import com.abrolly.model.Question;
+import com.abrolly.service.QuestionService;
 
 @RestController
 public class AwsController {

@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.abrolly.controller;
 
 import java.util.List;
 
@@ -9,28 +9,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.model.Customer;
-import com.example.model.Employee;
-import com.example.repository.CustomerRepository;
-import com.example.service.EmployeeService;
+import com.abrolly.model.Customer;
+import com.abrolly.repository.CustomerRepository;
+import com.abrolly.service.CustomerService;
 
 @RestController
-public class EmployeeController {
+public class CustomerController {
 	
 	@Autowired
-	private EmployeeService employeeService;
+	private CustomerService employeeService;
 	
 	@Autowired
 	CustomerRepository repository;
 	
     @RequestMapping(value = "/employee", method = RequestMethod.GET)
-    public List<Employee> getEmployees() {
-		return employeeService.getAllEmployees();
+    public List<Customer> getEmployees() {
+		return employeeService.getAllCustomers();
 	}
 
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
-    public Employee getEmployee(@PathVariable("id") long id) {
-		return employeeService.getEmployeeById(id);
+    public Customer getCustomer(@PathVariable("id") long id) {
+		return employeeService.getCUstomerById(id);
 	}
     
     @RequestMapping("/save")

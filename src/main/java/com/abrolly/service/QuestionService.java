@@ -1,8 +1,8 @@
-package com.example.service;
+package com.abrolly.service;
 
 import java.util.List;
 
-import com.example.model.Question;
+import com.abrolly.model.Question;
 
 public interface QuestionService {
 	

@@ -1,4 +1,4 @@
-package com.example.model;
+package com.abrolly.model;
 
 import java.io.Serializable;
 
@@ -14,6 +14,7 @@ import javax.persistence.Table;
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = -3009157732242241606L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -30,6 +31,12 @@ public class Customer implements Serializable {
 	public Customer(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+	
+	public Customer(long id, String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.id = id;
 	}
 
 	@Override

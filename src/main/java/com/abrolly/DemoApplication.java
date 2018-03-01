@@ -1,4 +1,4 @@
-package com.example;
+package com.abrolly;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,8 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.example.model.Employee;
-import com.example.repository.EmployeeRepository;
+import com.abrolly.model.Customer;
+import com.abrolly.repository.CustomerRepository;
+
+
 
 @SpringBootApplication
 public class DemoApplication {
@@ -21,12 +23,10 @@ public class DemoApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner setup(EmployeeRepository employeeRepository) {
+	public CommandLineRunner setup(CustomerRepository customerRepository) {
 		return (args) -> {
-			employeeRepository.save(new Employee("Gustavo", "Ponce", true));
-			employeeRepository.save(new Employee("John", "Smith", true));
-			employeeRepository.save(new Employee("Jim ", "Morrison", false));
-			employeeRepository.save(new Employee("David", "Gilmour", true));
+			customerRepository.save(new Customer(1, "Gustavo", "Ponce..."));
+			customerRepository.save(new Customer(2, "John", "Smith..."));
 			logger.info("The sample data has been generated");
 		};
 	}
