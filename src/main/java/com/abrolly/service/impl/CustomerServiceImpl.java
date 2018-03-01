@@ -1,4 +1,4 @@
-package com.abrolly.service;
+package com.abrolly.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.abrolly.model.Customer;
 import com.abrolly.repository.CustomerRepository;
+import com.abrolly.service.CustomerService;
 
 @Service("CustomerService")
 public class CustomerServiceImpl implements CustomerService {

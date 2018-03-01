@@ -1,4 +1,4 @@
-package com.abrolly.service;
+package com.abrolly.service.impl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.abrolly.model.Question;
 import com.abrolly.repository.QuestionRepository;
+import com.abrolly.service.QuestionService;
 
 @Service("questionService")
 public class QuestionServiceImpl implements QuestionService{
